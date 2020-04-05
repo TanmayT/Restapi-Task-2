@@ -11,7 +11,7 @@ Running seperate independent containers for api and mongodb via docker-compose
 
   - DOCKERFILEMONGO => mongo container docker file
   - DOCKERFILERESTAPI => docker file for restapi container
-  Both containers can be run seperately and linked together by using docker run command with --link argument. The Implementation part of this documentation focuses on running both containers together via docker-compose.
+  - Both containers can be run seperately and linked together by using docker run command with --link argument. The Implementation part of this documentation focuses on running both containers together via docker-compose.
   
 # Implementation
 
