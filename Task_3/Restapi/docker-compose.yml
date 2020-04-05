@@ -1,0 +1,26 @@
+# version: '3'
+
+mongoserver:
+    image: mongo:latest
+    container_name: mongoserver
+    restart: always
+    expose:
+      - 27017
+    ports:
+      - "27017:27017"
+    volumes:
+      - database:/data/db
+
+
+restapiimage:
+    build: .
+    dockerfile: dockerfiles/DOCKERFILERESTAPI
+    container_name: restapicontainer
+    expose:
+      - 8080
+    ports:
+      - "8080:8080"
+    links:
+      - mongoserver
+
+

@@ -1,0 +1,12 @@
+
+#pull openjdk libraries
+FROM openjdk:8
+
+#copy jar file from <src> path to <dest> path
+COPY target/*.jar /Restapi.jar
+
+#EXPOSE PORT 8080 FOR SPRING COMMUNICATIONS
+EXPOSE 8080
+
+#ENTRYPOINT FOR APPLICATION
+ENTRYPOINT ["java","-jar", "Restapi.jar"]
