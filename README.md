@@ -26,5 +26,5 @@ $ sudo docker-compose up --build
 $ sudo docker-compose down
 ```
 # Points to note
-- Persistant database is be stored at database/ folder inside the RestApiRemastered folder.
+- Persistant database is stored at database/ folder inside the RestApiRemastered folder.
 - Queries to be made at localhost port 8080
