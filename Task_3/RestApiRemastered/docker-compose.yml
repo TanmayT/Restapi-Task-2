@@ -1,0 +1,33 @@
+version: '3.3'
+services:
+  mongoserver:
+    image: mongo
+    container_name: mongoserver
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - database:/data/db
+    networks:
+      - net
+
+
+  restapiimage:
+    build:
+      context: .
+      dockerfile: dockerfiles/DOCKERFILERESTAPIREMASTERED  
+    container_name: restapicontainer
+    ports:
+      - "8080:8080"
+    links:
+      - "mongoserver"
+    networks:
+      - net
+    environment:
+      MONGO_HOST: mongoserver
+
+volumes:
+  database:
+
+networks:
+  net:
