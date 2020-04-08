@@ -1,0 +1,4 @@
+com/example/RestApiRemastered/Model/Data.class
+com/example/RestApiRemastered/Controller/DataController.class
+com/example/RestApiRemastered/RestApiRemasteredApplication.class
+com/example/RestApiRemastered/Repository/DataRepository.class
